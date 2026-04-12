@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Crypto Portfolio Tracker</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <h1>Crypto Portfolio <span>Tracker</span></h1>
+      <div class="inputs">
+        <input type="text" id="coinName" placeholder="Coin name e.g. Bitcoin" />
+        <input type="number" id="quantity" placeholder="Quantity e.g. 2" />
+        <input type="number" id="price" placeholder="Price in USD e.g. 60000" />
+      </div>
+      <button id="addCoin">Add Coin</button>
+      <div id="coinList"></div>
+      <p id="portValue"></p>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
