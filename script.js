@@ -19,9 +19,8 @@ addCoin.addEventListener("click", function () {
   document.getElementById("price").value = "";
 
   coinList.innerHTML = "";
-  let total = 0;
 
-  for (const coin of coins) {
+  coins.forEach((coin) => {
     coinList.innerHTML += `
     <div class="card">
       <h3>${coin.name}</h3>
@@ -30,8 +29,8 @@ addCoin.addEventListener("click", function () {
       <p>Value: $${coin.quantity * coin.price}</p>
     </div>
   `;
-    total += coin.quantity * coin.price;
-  }
-
+  });
+  const values = coins.map((coin) => coin.quantity * coin.price);
+  const total = values.reduce((acc, value) => acc + value, 0);
   portValue.textContent = `Total Portfolio Value: $${total}`;
 });
